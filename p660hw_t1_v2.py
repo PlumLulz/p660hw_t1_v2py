@@ -22,7 +22,7 @@ def p660hw_t1_v2(mac, pwd_length):
 
 	# First MD5 digest
 	digest1 = hashlib.md5()
-	digest1.update(mac.encode())
+	digest1.update(mac.lower().encode())
 	total = sum(digest1.digest())
 
 	three_letter_pos = total % 265
